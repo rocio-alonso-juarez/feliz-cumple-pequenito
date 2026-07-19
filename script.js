@@ -379,3 +379,30 @@ setInterval(()=>{
     });
 
 },2200);
+/*==================================
+    PARTE 6 - EFECTOS CASTILLO
+==================================*/
+
+const castillo=document.getElementById("castilloImagen");
+
+if(castillo){
+
+setInterval(()=>{
+
+castillo.animate([
+
+{filter:"drop-shadow(0 0 20px gold)"},
+
+{filter:"drop-shadow(0 0 70px #fff5aa)"},
+
+{filter:"drop-shadow(0 0 20px gold)"}
+
+],{
+
+duration:3500
+
+});
+
+},3500);
+
+}
