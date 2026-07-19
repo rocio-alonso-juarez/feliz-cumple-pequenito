@@ -296,3 +296,138 @@ transform:translateX(calc(100vw + 350px));
 }
 
 }
+/*==================================
+      PARTE 6 - CASTILLO
+==================================*/
+
+#escena{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    pointer-events:none;
+
+}
+
+#castilloImagen{
+
+    width:650px;
+
+    max-width:90%;
+
+    filter:
+
+    drop-shadow(0 0 20px rgba(255,230,120,.9))
+
+    drop-shadow(0 0 70px rgba(255,230,120,.6));
+
+    animation:
+
+    aparecerCastillo 4s ease,
+
+    flotar 5s ease-in-out infinite;
+
+}
+
+@keyframes aparecerCastillo{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(120px)
+
+        scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0)
+
+        scale(1);
+
+    }
+
+}
+
+@keyframes flotar{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Resplandor */
+
+#escena::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+
+    height:300px;
+
+    bottom:30px;
+
+    background:radial-gradient(circle,
+    rgba(255,224,120,.35),
+    transparent 70%);
+
+    filter:blur(20px);
+
+    animation:haloMagico 4s ease-in-out infinite;
+
+}
+
+@keyframes haloMagico{
+
+0%,100%{
+
+transform:scale(.95);
+
+opacity:.6;
+
+}
+
+50%{
+
+transform:scale(1.1);
+
+opacity:1;
+
+}
+
+}
