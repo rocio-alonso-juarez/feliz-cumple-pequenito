@@ -235,3 +235,147 @@ frases.forEach((f,i)=>{
     },1500+i*1200);
 
 });
+/* ==========================================
+        PARTE 5 - EFECTOS MÁGICOS
+========================================== */
+
+// ❤️ Corazones flotando
+
+function crearCorazon(){
+
+    const corazon=document.createElement("div");
+
+    corazon.className="heart";
+
+    corazon.innerHTML=Math.random()>0.5?"🤍":"❤️";
+
+    corazon.style.left=Math.random()*window.innerWidth+"px";
+
+    corazon.style.animationDuration=
+    (6+Math.random()*4)+"s";
+
+    corazon.style.fontSize=
+    (18+Math.random()*18)+"px";
+
+    document.body.appendChild(corazon);
+
+    setTimeout(()=>{
+
+        corazon.remove();
+
+    },10000);
+
+}
+
+setInterval(crearCorazon,700);
+
+
+// 🌠 Estrellas fugaces
+
+function estrellaFugaz(){
+
+    const estrella=document.createElement("div");
+
+    estrella.className="shooting-star";
+
+    estrella.style.left=
+    Math.random()*window.innerWidth+"px";
+
+    estrella.style.top=
+    Math.random()*250+"px";
+
+    document.body.appendChild(estrella);
+
+    setTimeout(()=>{
+
+        estrella.remove();
+
+    },2500);
+
+}
+
+setInterval(estrellaFugaz,4500);
+
+
+// ✨ Polvo mágico
+
+function polvoMagico(){
+
+    const magia=document.createElement("div");
+
+    magia.className="magic";
+
+    magia.style.left=
+    (window.innerWidth/2-120+
+    Math.random()*240)+"px";
+
+    magia.style.top=
+    (window.innerHeight/2-80+
+    Math.random()*160)+"px";
+
+    document.body.appendChild(magia);
+
+    setTimeout(()=>{
+
+        magia.remove();
+
+    },5000);
+
+}
+
+setInterval(polvoMagico,180);
+
+
+// 💫 Brillo del título
+
+const tituloMagico=document.querySelector(".titulo");
+
+let intensidad=0;
+
+setInterval(()=>{
+
+    intensidad+=0.08;
+
+    tituloMagico.style.transform=
+    `scale(${1+Math.sin(intensidad)*0.02})`;
+
+},40);
+
+
+// 🌙 Brillo de la luna
+
+const luna=document.getElementById("luna");
+
+if(luna){
+
+setInterval(()=>{
+
+    luna.style.opacity=
+    0.75+Math.random()*0.25;
+
+},1200);
+
+}
+
+
+// 🎵 Botón con efecto
+
+const botonMusica=document.getElementById("musicaBtn");
+
+setInterval(()=>{
+
+    botonMusica.animate([
+
+        {transform:"scale(1)"},
+
+        {transform:"scale(1.12)"},
+
+        {transform:"scale(1)"}
+
+    ],{
+
+        duration:1800
+
+    });
+
+},2200);
