@@ -1,9 +1,33 @@
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#020817;color:#fff;font-family:Poppins,sans-serif;overflow:hidden}
+body{
+    margin:0;
+    overflow-x:hidden;
+    background:#020817;
+    color:white;
+    font-family:'Poppins',sans-serif;
+}
 #intro{position:fixed;inset:0;display:flex;justify-content:center;align-items:center;background:radial-gradient(circle at top,#243b7a,#081229,#01040f)}
 #estrellas{position:absolute;inset:0}
-#castillo{text-align:center;z-index:2}
-.titulo{font-family:Cinzel,serif;font-size:4rem;color:#ffe8a3;text-shadow:0 0 20px gold}
+#castillo{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    padding:20px;
+    position:relative;
+    z-index:5;
+}
+.titulo{
+    font-family:'Cinzel',serif;
+    font-size:clamp(2.2rem,8vw,4rem);
+    color:#ffe8a3;
+    text-shadow:0 0 10px gold,
+                0 0 25px gold,
+                0 0 45px gold;
+    text-align:center;
+    width:100%;
+    padding:0 20px;
+}
 .frase{margin-top:30px;font-size:1.2rem}
 .frase2{margin-top:20px;color:#ffd86b;font-family:Cinzel,serif}
 #carta{display:none;min-height:100vh;padding:80px 20px;background:linear-gradient(#06152f,#183c72,#f4d8dc)}
