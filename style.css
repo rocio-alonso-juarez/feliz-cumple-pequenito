@@ -3,7 +3,21 @@ body{background:#020817;color:#fff;font-family:Poppins,sans-serif;overflow:hidde
 #intro{position:fixed;inset:0;display:flex;justify-content:center;align-items:center;background:radial-gradient(circle at top,#243b7a,#081229,#01040f)}
 #estrellas{position:absolute;inset:0}
 #castillo{text-align:center;z-index:2}
-.titulo{font-family:Cinzel,serif;font-size:4rem;color:#ffe8a3;text-shadow:0 0 20px gold}
+.titulo{
+    font-family:'Cinzel', serif;
+    font-size:clamp(1.6rem, 7vw, 2.8rem);
+    color:#ffe8a3;
+    text-shadow:
+        0 0 6px gold,
+        0 0 18px gold,
+        0 0 30px rgba(255,215,0,.8);
+
+    text-align:center;
+    width:100%;
+    padding:0 25px;
+    line-height:1.2;
+    word-wrap:break-word;
+}
 .frase{margin-top:30px;font-size:1.2rem}
 .frase2{margin-top:20px;color:#ffd86b;font-family:Cinzel,serif}
 #carta{display:none;min-height:100vh;padding:80px 20px;background:linear-gradient(#06152f,#183c72,#f4d8dc)}
